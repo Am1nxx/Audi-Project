@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@100;300;400;600;700;900&display=swap");
+
+/* GENERAL STYLES */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+  font-family: "Ysabeau Infant", sans-serif;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+ul li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* BANNER */
+.sect1 {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.banner {
+  padding: 2rem;
+}
+.logo-image {
+  width: 15rem;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BANNER BUTTONS */
+.links {
+  display: flex;
+}
+.links li {
+  margin: 0 2rem;
+  font-size: 2rem;
+}
+.links li a {
+  color: black;
+  padding: 5px 0;
+  transition: all 0.5s linear;
+}
+.links li:last-child a {
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 32px;
+}
+.hac:hover {
+  border-bottom: 1px solid black;
+}
+.links li:last-child a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* SECTION 2 */
+
+.background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(Project3-Images/Audi-R8.jpg);
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/*SECTION 2 CONTENT */
+.section2-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+}
+.section2-content h1 {
+  margin-top: 0;
+  color: white;
+  font-size: 5rem;
+}
+.section2-content a {
+  color: white;
+  padding: 20px 30px;
+  border: 1px solid white;
+  font-size: 1.8rem;
+  transition: all 0.4s linear;
+}
+.section2-content a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* SECTION 3 */
+.card img {
+  width: 40rem;
+  height: 22rem;
+}
+.card {
+  width: 40rem;
+  height: 22rem;
+  margin: 3rem 1rem;
+}
+/* @media screen and (max-width: 380px) {
+  .card img {
+    width: 38rem;
+    height: 20rem;
+  }
+  .card {
+    width: 38rem;
+    height: 20rem;
+    margin: 3rem 1rem;
+  }
+  .flip-card {
+    width: 38rem;
+    height: 20rem;
+  }
+} */
+/* SECTION 3 CARD IMAGE */
+.card img {
+  position: absolute;
+  /* width: 40rem; */
+  backface-visibility: hidden;
+  border-radius: 7px;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: all 1s linear;
+  cursor: pointer;
+}
+/* SECTION 3 CARD CONTENT */
+.flip-card {
+  position: absolute;
+  width: 40rem;
+  height: 22rem;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  backface-visibility: hidden;
+  border-radius: 7px;
+  transform: perspective(1000px) rotateY(180deg);
+  transition: all 1s linear;
+  cursor: pointer;
+}
+.card:hover img {
+  transform: perspective(1000px) rotateY(-180deg);
+}
+.card:hover .flip-card {
+  transform: perspective(1000px) rotateY(0deg);
+}
+.models {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sect3 h2 {
+  font-size: 4rem;
+}
+.sect3 p {
+  font-size: 2rem;
+  margin-top: 0;
+  font-weight: 200;
+}
+
+/* SECTION 4 */
+.sect4 h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+.sect4 img {
+  width: 100%;
+}
+.gallery {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+.gallery img {
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 32px;
+  cursor: pointer;
+  display: none;
+}
+.active {
+  display: block !important;
+  animation: fade 0.6s ease;
+}
+.activelist {
+  opacity: 0.6;
+}
+.boxlist {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+}
+.boxlist li {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: gray;
+  border-radius: 32px;
+  cursor: pointer;
+}
+@keyframes fade {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.next,
+.previous {
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  margin: 0 1rem;
+  color: white;
+  transition: all 0.8s ease;
+}
+.next:hover,
+.previous:hover {
+  opacity: 0.6;
+}
+.previous {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+/* SECTION 5 */
+.sect5 {
+  padding: 5rem;
+}
+.sect5 h2 {
+  font-size: 4rem;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5rem;
+  font-size: 6rem;
+}
+/* ICONS STYLES */
+.fa-twitter {
+  color: #00acee;
+}
+.fa-youtube {
+  color: #cd201f;
+}
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-instagram {
+  color: #cd486b;
+}
+.icons a {
+  padding: 0 10rem;
+}
+.border-left {
+  border-left: 1px solid black;
+}
+
+/* FOOTER */
+footer {
+  padding: 5rem;
+  background-color: rgb(63, 63, 63);
+  color: white;
+}
+.pages {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+.pages div {
+  padding: 0 8rem;
+  text-align: center;
+  cursor: pointer;
+}
+.pages div i {
+  font-size: 4rem;
+}
+.pages div h3 {
+  font-weight: 300;
+}
+.pages div:hover h3 {
+  opacity: 0.7;
+}
+.test-drive,
+.service,
+.contact-us {
+  border-left: 1px solid white;
+}
+.footer-content {
+  padding-top: 2rem;
+  border-top: 1px solid white;
+}
+
+@media screen and (max-width: 1150px) {
+  .icons a {
+    padding: 0 8rem;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  html {
+    font-size: 9px;
+  }
+  .section2-content {
+    margin: 0 1rem;
+  }
+  .sect3 h2,
+  p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .gallery img {
+    padding: 0 2rem;
+  }
+}
+@media screen and (max-width: 890px) {
+  .models {
+    flex-direction: column;
+  }
+  .models2 {
+    margin-top: -36px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .section2-content h1 {
+    font-size: 3rem;
+  }
+  .icons {
+    flex-direction: column;
+  }
+  .icons a {
+    border-left: none !important;
+    text-align: center;
+  }
+  .icons i {
+    padding: 4rem;
+  }
+  .border-left i {
+    border-top: 1px solid black;
+  }
+  .background {
+    height: 60vh;
+  }
+  .section2-content {
+    height: 50vh;
+  }
+  .section2-content a {
+    padding: 15px 25px;
+
+    font-size: 1.3rem;
+    transition: all 0.4s linear;
+  }
+  .pages {
+    flex-direction: column;
+  }
+  .test-drive,
+  .service,
+  .contact-us {
+    border-top: 1px solid white;
+    border-left: none;
+  }
+  .pages div {
+    padding: 4rem 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  .card {
+    margin: 3rem 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .links {
+    display: none;
+  }
+  .fa-bars {
+    display: block !important;
+  }
+  .fa-x {
+    display: block !important;
+  }
+  /* .open-menu {
+    display: block !important;
+  } */
+  .display-block {
+    display: block !important;
+  }
+}
+
+.open-menu {
+  display: none;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+.open-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 2rem 0;
+}
+.open-menu li {
+  font-size: 2rem;
+  padding: 2rem 0 2rem 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.open-menu li:hover {
+  background-color: black;
+}
+.open-menu li:hover a {
+  color: white;
+}
+.open-menu li a {
+  color: black;
+}
+.fa-bars {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+.fa-x {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.7s ease;
+}
+.fa-bars:hover {
+  opacity: 0.6;
+}
